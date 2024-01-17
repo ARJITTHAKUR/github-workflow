@@ -8,7 +8,7 @@ jobs:
         steps:
             - name : Get code
             # instead of using "run" command we are going to use "uses" to trigger action
-              uses: action/checkout@v4
+              uses: action/checkout@v3
             - name : Install NodeJS
             # link for action https://github.com/marketplace/actions/setup-node-js-environment
               uses:  actions/setup-node@v4
