@@ -1,0 +1,22 @@
+name: Test Project
+
+on: push 
+
+jobs: 
+    tests : 
+        runs-on: ubuntu-latest
+        steps:
+            - name : Get code
+            # instead of using "run" command we are going to use "uses" to trigger action
+              uses: action/checkout@v4
+            - name : Install NodeJS
+            # link for action https://github.com/marketplace/actions/setup-node-js-environment
+              uses:  actions/setup-node@v4
+              with: 
+                node-version: 18
+            - name: Change directory
+              run: cd ./react-github
+            - name: Install dependencies
+              run:  npm ci
+            - name: Run Test
+              run: npm test      
