@@ -25,3 +25,7 @@ using ```with:``` keyword
 ## Experssion and Context Objects
 1. to access environment variables and other things we can use expression and context objects
 2. list of all the context objects are available on [link](https://docs.github.com/en/actions/learn-github-actions/contexts)
+
+## Event Activity Type and Filters
+1. Some events have activity type for `pull_request: opened`
+2. Filter control when will the event will be triggered `push Event : filter based on a branch`
